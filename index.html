@@ -22,7 +22,11 @@
         * {
             margin: 0;
             padding: 0;
-  
+            box-sizing: border-box;
+        }
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
         }
 
         .container {
@@ -1248,6 +1252,26 @@
         .member-item .member-image img[src="members/memb4.jpg"] {
             object-position: center 20%;
         }
+
+        /* Responsive tweaks for images and containers */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+        @media (max-width: 400px) {
+            .container {
+                padding: 0 2vw;
+            }
+            .hero-title, .section-title {
+                font-size: 1.2rem !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2295,3 +2319,4 @@ United we stand, stronger we grow — this is the spirit of AIDSA.</p>
 
 
 
+          
