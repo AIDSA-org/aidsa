@@ -8,8 +8,104 @@
     <link rel="stylesheet" href="style.css">
     <!-- Add Font Awesome CDN for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+/* Ensure only one image is visible per slide */
+.image-slider .slider-container {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(.4,0,.2,1);
+    width: 100%;
+}
+.image-slider .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Hamburger button top left */
+.hamburger-overlay-btn {
+    position: fixed;
+    top: 18px;
+    left: 18px;
+    z-index: 1001;
+    background: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    cursor: pointer;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Overlay menu styles */
+.overlay-menu {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255,255,255,0.98);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.overlay-menu.open {
+    display: flex;
+}
+.overlay-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.overlay-menu li {
+    margin: 18px 0;
+}
+.overlay-menu a {
+    font-size: 2rem;
+    color: #222;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+.overlay-menu a:hover {
+    color: #007bff;
+}
+.overlay-menu .close-btn {
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 2.2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #222;
+}
+@media (max-width: 900px) {
+    .hamburger-overlay-btn { top: 10px; left: 10px; }
+    .overlay-menu a { font-size: 1.5rem; }
+}
+</style>
 </head>
 <body>
+    <!-- Hamburger Overlay Button -->
+    <button class="hamburger-overlay-btn" id="hamburgerOverlayBtn" aria-label="Open menu">
+        <i class="fas fa-bars"></i>
+    </button>
+    <!-- Overlay Menu -->
+    <nav class="overlay-menu" id="overlayMenu" aria-hidden="true">
+        <button class="close-btn" id="overlayCloseBtn" aria-label="Close menu">&times;</button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#president">President</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#members">Our Members</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#membership">Membership</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
     <!-- Header & Navigation -->
     <header>
         <div class="header-container container">
@@ -43,59 +139,59 @@
             <div class="hero-content">
                 <h1 class="hero-title">All India Dental Students & Surgeons Association</h1>
                 <p class="hero-description">Empowering the future of dentistry through education, collaboration, and innovation. Join us in shaping the next generation of dental professionals.</p>
-                <a href="#membership" class="btn hero-btn nav-link">Join Us Today</a>
+                <a href="#membership" class="btn hero-btn nav-link">Join Us</a>
             </div>
-        </div>
-        
-        <!-- Image Slider -->
-        <div class="image-slider">
-            <div class="slider-container">
-                <div class="slide">
-                    <img src="slide photos/slide1.jpg" alt="Dental Students" loading="lazy">
+            
+            <!-- Image Slider -->
+            <div class="image-slider">
+                <div class="slider-container">
+                    <div class="slide">
+                        <img src="slide photos/slide1.jpg" alt="Dental Students" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="slide photos/slide2.jpg" alt="Dental Conference" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="slide photos/slide3.jpg" alt="Dental Workshop" loading="lazy">
+                    </div>
+                    <div class="slide">
+                        <img src="slide photos/slide6.jpg" alt="Dental Care" loading="lazy">
+                    </div>
+                     <div class="slide">
+                        <img src="slide photos/slide5.jpg" alt="Dental Care" loading="lazy">
+                    </div>
+                     <div class="slide">
+                        <img src="slide photos/slide7.jpg" alt="Dental Care" loading="lazy">
+                    </div>
+                     <div class="slide">
+                        <img src="slide photos/slide8.jpg" alt="Dental Care" loading="lazy">
+                    </div>
+                     <div class="slide">
+                        <img src="slide photos/slide9.jpg" alt="Dental Care" loading="lazy">
+                    </div>
+                     <div class="slide">
+                        <img src="slide photos/slide11.jpg" alt="Dental Care" loading="lazy">
+                    </div>
+                     <div class="slide">
+                        <img src="slide photos/slide12.jpg" alt="Dental Care" loading="lazy">
+                    </div>
                 </div>
-                <div class="slide">
-                    <img src="slide photos/slide2.jpg" alt="Dental Conference" loading="lazy">
-                </div>
-                <div class="slide">
-                    <img src="slide photos/slide3.jpg" alt="Dental Workshop" loading="lazy">
-                </div>
-                <div class="slide">
-                    <img src="slide photos/slide4.jpg" alt="Dental Care" loading="lazy">
-                </div>
-                 <div class="slide">
-                    <img src="slide photos/slide5.jpg" alt="Dental Care" loading="lazy">
-                </div>
-                 <div class="slide">
-                    <img src="slide photos/slide7.jpg" alt="Dental Care" loading="lazy">
-                </div>
-                 <div class="slide">
-                    <img src="slide photos/slide8.jpg" alt="Dental Care" loading="lazy">
-                </div>
-                 <div class="slide">
-                    <img src="slide photos/slide9.jpg" alt="Dental Care" loading="lazy">
-                </div>
-                 <div class="slide">
-                    <img src="slide photos/slide11.jpg" alt="Dental Care" loading="lazy">
-                </div>
-                 <div class="slide">
-                    <img src="slide photos/slide12.jpg" alt="Dental Care" loading="lazy">
+                <div class="slider-nav">
+                    <div class="slider-dot active"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
                 </div>
             </div>
-            <div class="slider-nav">
-                <div class="slider-dot active"></div>
-                <div class="slider-dot"></div>
-                <div class="slider-dot"></div>
-                <div class="slider-dot"></div>
+            
+            <div class="floating-icons">
+                <i class="fas fa-tooth floating-icon" style="top: 20%; left: 10%; animation-delay: 4s;"></i>
+                <i class="fas fa-teeth floating-icon" style="top: 30%; left: 80%; animation-delay: 3s;"></i>
+                <i class="fas fa-teeth-open floating-icon" style="top: 60%; left: 15%; animation-delay: 3s;"></i>
+                <i class="fas fa-tooth floating-icon" style="top: 70%; left: 70%; animation-delay: 3s;"></i>
+                <i class="fas fa-teeth-floating-icon" style="top: 40%; left: 50%; animation-delay: 3s;"></i>
+                <i class="fas fa-teeth-open floating-icon" style="top: 50%; left: 85%; animation-delay: 4s;"></i>
             </div>
-        </div>
-        
-        <div class="floating-icons">
-            <i class="fas fa-tooth floating-icon" style="top: 20%; left: 10%; animation-delay: 4s;"></i>
-            <i class="fas fa-teeth floating-icon" style="top: 30%; left: 80%; animation-delay: 3s;"></i>
-            <i class="fas fa-teeth-open floating-icon" style="top: 60%; left: 15%; animation-delay: 3s;"></i>
-            <i class="fas fa-tooth floating-icon" style="top: 70%; left: 70%; animation-delay: 3s;"></i>
-            <i class="fas fa-teeth floating-icon" style="top: 40%; left: 50%; animation-delay: 3s;"></i>
-            <i class="fas fa-teeth-open floating-icon" style="top: 50%; left: 85%; animation-delay: 4s;"></i>
         </div>
     </section>
 
@@ -878,26 +974,26 @@ United we stand, stronger we grow — this is the spirit of AIDSA.</p>
         });
 
         // Image Slider Functionality
-        let currentSlide = 1;
+        let currentSlide = 0; // Start from 0
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.slider-dot');
         const sliderContainer = document.querySelector('.slider-container');
-        
+
         function showSlide(n) {
             currentSlide = (n + slides.length) % slides.length;
             sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
-            
+
             // Update dots
             dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === currentSlide);
             });
         }
-        
-        // Auto slide every 5 seconds
+
+        // Auto slide every 3 seconds
         setInterval(() => {
             showSlide(currentSlide + 1);
-        }, 8000);
-        
+        }, 3000);
+
         // Add click events to dots
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
@@ -1013,10 +1109,56 @@ United we stand, stronger we grow — this is the spirit of AIDSA.</p>
             initLightboxFeature();
             // Removed JS for opening payment lightbox, as payment.html is now used.
         });
+
+        // Hamburger Overlay Menu Functionality
+    const hamburgerOverlayBtn = document.getElementById('hamburgerOverlayBtn');
+    const overlayMenu = document.getElementById('overlayMenu');
+    const overlayCloseBtn = document.getElementById('overlayCloseBtn');
+
+    hamburgerOverlayBtn.addEventListener('click', () => {
+        overlayMenu.classList.add('open');
+        overlayMenu.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    });
+
+    overlayCloseBtn.addEventListener('click', () => {
+        overlayMenu.classList.remove('open');
+        overlayMenu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    });
+
+    // Close overlay when clicking outside menu
+    overlayMenu.addEventListener('click', (e) => {
+        if (e.target === overlayMenu) {
+            overlayMenu.classList.remove('open');
+            overlayMenu.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+        }
+    });
+
+    // Redirect to section and close overlay on menu item click
+    overlayMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            overlayMenu.classList.remove('open');
+            overlayMenu.setAttribute('aria-hidden', 'true');
+            document.body.style.overflow = '';
+            // Smooth scroll
+            const targetId = this.getAttribute('href');
+            if(targetId && targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
     </script>
 </body>
 </html>
-
 
 
 
