@@ -84,6 +84,59 @@
     .hamburger-overlay-btn { top: 10px; left: 10px; }
     .overlay-menu a { font-size: 1.5rem; }
 }
+
+/* Gallery Section Styles */
+.gallery {
+    padding: 60px 0;
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+}
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+.gallery-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+.gallery-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+    background: rgba(0,0,0,0.15);
+}
+.gallery-item:hover .gallery-overlay,
+.gallery-item:focus-within .gallery-overlay {
+    opacity: 1;
+}
+.zoom-btn {
+    background: rgba(255,255,255,0.85);
+    border: none;
+    border-radius: 50%;
+    padding: 12px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s;
+}
+.zoom-btn:hover {
+    background: #fff;
+}
 </style>
 </head>
 <body>
@@ -671,111 +724,165 @@ United we stand, stronger we grow — this is the spirit of AIDSA.</p>
             <div class="gallery-container">
                 <div class="gallery-item">
                     <img src="Gallery/img1.jpg" alt="Gallery 1" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img2.jpg" alt="Gallery 2" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img3.jpg" alt="Gallery 3" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img4.jpg" alt="Gallery 4" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img5.jpg" alt="Gallery 5" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img6.jpg" alt="Gallery 6" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img7.jpg" alt="Gallery 7" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img8.jpg" alt="Gallery 8" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img9.jpg" alt="Gallery 9" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img10.jpg" alt="Gallery 10" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img11.jpg" alt="Gallery 11" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img12.jpg" alt="Gallery 12" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img13.jpg" alt="Gallery 13" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img14.jpg" alt="Gallery 14" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img15.jpg" alt="Gallery 15" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img16.jpg" alt="Gallery 16" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img17.jpg" alt="Gallery 17" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img18.jpg" alt="Gallery 18" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img19.jpg" alt="Gallery 19" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img20.jpg" alt="Gallery 20" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img21.jpg" alt="Gallery 21" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img22.jpg" alt="Gallery 22" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img23.jpg" alt="Gallery 23" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img24.jpg" alt="Gallery 24" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img25.jpg" alt="Gallery 25" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img26.jpg" alt="Gallery 26" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
                 <div class="gallery-item">
                     <img src="Gallery/img27.jpg" alt="Gallery 27" loading="lazy">
-                    <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                    <div class="gallery-overlay">
+                        <button class="zoom-btn" aria-label="Zoom"><i class="fas fa-search-plus"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1082,6 +1189,17 @@ United we stand, stronger we grow — this is the spirit of AIDSA.</p>
                 img.addEventListener('click', (e) => {
                     e.preventDefault();
                     openLightbox(idx);
+                });
+            });
+
+            // Add click handler for zoom buttons
+            document.querySelectorAll('.zoom-btn').forEach((btn, i) => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    // Find the img inside the same gallery-item
+                    const img = btn.closest('.gallery-item').querySelector('img');
+                    const idx = items.indexOf(img);
+                    if (idx !== -1) openLightbox(idx);
                 });
             });
 
